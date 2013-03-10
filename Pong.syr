@@ -1,0 +1,730 @@
+Release 12.2 - xst M.63c (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Reading design: Pong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Pong.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Pong"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-cp132
+
+---- Source Options
+Top Module Name                    : Pong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//pdc-srv/loyauf/SuperPONG/Counter.vhd" in Library work.
+Architecture behavioral of Entity counter is up to date.
+Compiling vhdl file "//pdc-srv/loyauf/SuperPONG/ctrlVGA.vhd" in Library work.
+Architecture behavioral of Entity ctrlvga is up to date.
+Compiling vhdl file "//pdc-srv/loyauf/SuperPONG/ClockDiv.vhd" in Library work.
+Architecture behavioral of Entity clockdiv is up to date.
+Compiling vhdl file "//pdc-srv/loyauf/SuperPONG/VGA_Rectangle.vhd" in Library work.
+Architecture nwfilled of Entity vga_rectangle is up to date.
+Compiling vhdl file "//pdc-srv/loyauf/SuperPONG/Pong.vhd" in Library work.
+Entity <pong> compiled.
+Entity <pong> (Architecture <classic>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Pong> in library <work> (architecture <classic>) with generics.
+	h_wid = 11
+	v_wid = 11
+
+Analyzing hierarchy for entity <ctrlVGA> in library <work> (architecture <Behavioral>) with generics.
+	b_depth = 2
+	g_depth = 3
+	h_bp = 160
+	h_fp = 16
+	h_pix = 800
+	h_sp = 80
+	h_wid = 11
+	r_depth = 3
+	v_bp = 21
+	v_fp = 1
+	v_pix = 600
+	v_sp = 3
+	v_wid = 11
+
+Analyzing hierarchy for entity <ClockDiv> in library <work> (architecture <Behavioral>) with generics.
+	n = 5000
+	vect_wid = 13
+
+Analyzing hierarchy for entity <ClockDiv> in library <work> (architecture <Behavioral>) with generics.
+	n = 100
+	vect_wid = 7
+
+Analyzing hierarchy for entity <VGA_Rectangle> in library <work> (architecture <NWFilled>) with generics.
+	h_wid = 11
+	v_wid = 11
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <Behavioral>) with generics.
+	max = 1056
+	width = 11
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <Behavioral>) with generics.
+	max = 625
+	width = 11
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <Behavioral>) with generics.
+	max = 5000
+	width = 13
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <Behavioral>) with generics.
+	max = 100
+	width = 7
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <Pong> in library <work> (Architecture <classic>).
+	h_wid = 11
+	v_wid = 11
+WARNING:Xst:752 - "//pdc-srv/loyauf/SuperPONG/Pong.vhd" line 76: Unconnected input port 'xborder' of component 'VGA_Rectangle' is tied to default value.
+WARNING:Xst:752 - "//pdc-srv/loyauf/SuperPONG/Pong.vhd" line 76: Unconnected input port 'yborder' of component 'VGA_Rectangle' is tied to default value.
+WARNING:Xst:752 - "//pdc-srv/loyauf/SuperPONG/Pong.vhd" line 76: Unconnected input port 'clk' of component 'VGA_Rectangle' is tied to default value.
+WARNING:Xst:752 - "//pdc-srv/loyauf/SuperPONG/Pong.vhd" line 82: Unconnected input port 'xborder' of component 'VGA_Rectangle' is tied to default value.
+WARNING:Xst:752 - "//pdc-srv/loyauf/SuperPONG/Pong.vhd" line 82: Unconnected input port 'yborder' of component 'VGA_Rectangle' is tied to default value.
+WARNING:Xst:752 - "//pdc-srv/loyauf/SuperPONG/Pong.vhd" line 82: Unconnected input port 'clk' of component 'VGA_Rectangle' is tied to default value.
+Entity <Pong> analyzed. Unit <Pong> generated.
+
+Analyzing generic Entity <ctrlVGA> in library <work> (Architecture <Behavioral>).
+	b_depth = 2
+	g_depth = 3
+	h_bp = 160
+	h_fp = 16
+	h_pix = 800
+	h_sp = 80
+	h_wid = 11
+	r_depth = 3
+	v_bp = 21
+	v_fp = 1
+	v_pix = 600
+	v_sp = 3
+	v_wid = 11
+Entity <ctrlVGA> analyzed. Unit <ctrlVGA> generated.
+
+Analyzing generic Entity <Counter.1> in library <work> (Architecture <Behavioral>).
+	max = 1056
+	width = 11
+Entity <Counter.1> analyzed. Unit <Counter.1> generated.
+
+Analyzing generic Entity <Counter.2> in library <work> (Architecture <Behavioral>).
+	max = 625
+	width = 11
+Entity <Counter.2> analyzed. Unit <Counter.2> generated.
+
+Analyzing generic Entity <ClockDiv.1> in library <work> (Architecture <Behavioral>).
+	n = 5000
+	vect_wid = 13
+Entity <ClockDiv.1> analyzed. Unit <ClockDiv.1> generated.
+
+Analyzing generic Entity <Counter.3> in library <work> (Architecture <Behavioral>).
+	max = 5000
+	width = 13
+Entity <Counter.3> analyzed. Unit <Counter.3> generated.
+
+Analyzing generic Entity <ClockDiv.2> in library <work> (Architecture <Behavioral>).
+	n = 100
+	vect_wid = 7
+Entity <ClockDiv.2> analyzed. Unit <ClockDiv.2> generated.
+
+Analyzing generic Entity <Counter.4> in library <work> (Architecture <Behavioral>).
+	max = 100
+	width = 7
+Entity <Counter.4> analyzed. Unit <Counter.4> generated.
+
+Analyzing generic Entity <VGA_Rectangle> in library <work> (Architecture <NWFilled>).
+	h_wid = 11
+	v_wid = 11
+Entity <VGA_Rectangle> analyzed. Unit <VGA_Rectangle> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <VGA_Rectangle>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/VGA_Rectangle.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <h> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <yborder> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <xborder> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 11-bit adder for signal <Displayed_int$addsub0000> created at line 40.
+    Found 11-bit comparator greatequal for signal <Displayed_int$cmp_ge0000> created at line 40.
+    Found 11-bit comparator greatequal for signal <Displayed_int$cmp_ge0001> created at line 40.
+    Found 11-bit comparator lessequal for signal <Displayed_int$cmp_le0000> created at line 40.
+    Found 11-bit comparator lessequal for signal <Displayed_int$cmp_le0001> created at line 40.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <VGA_Rectangle> synthesized.
+
+
+Synthesizing Unit <Counter_1>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/Counter.vhd".
+    Found 11-bit register for signal <value_int>.
+    Found 11-bit adder for signal <value_next$addsub0000> created at line 16.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_1> synthesized.
+
+
+Synthesizing Unit <Counter_2>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/Counter.vhd".
+    Found 11-bit up counter for signal <value_int>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter_2> synthesized.
+
+
+Synthesizing Unit <Counter_3>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/Counter.vhd".
+    Found 13-bit register for signal <value_int>.
+    Found 13-bit adder for signal <value_next$addsub0000> created at line 16.
+    Summary:
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_3> synthesized.
+
+
+Synthesizing Unit <Counter_4>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/Counter.vhd".
+    Found 7-bit register for signal <value_int>.
+    Found 7-bit adder for signal <value_next$addsub0000> created at line 16.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Counter_4> synthesized.
+
+
+Synthesizing Unit <ctrlVGA>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/ctrlVGA.vhd".
+    Found 11-bit comparator less for signal <Blank_int$cmp_lt0000> created at line 77.
+    Found 11-bit comparator less for signal <Blank_int$cmp_lt0001> created at line 77.
+    Found 11-bit subtractor for signal <columnCounter$addsub0000> created at line 84.
+    Found 31-bit comparator greatequal for signal <HSync$cmp_ge0000> created at line 72.
+    Found 11-bit comparator less for signal <HSync$cmp_lt0000> created at line 72.
+    Found 11-bit subtractor for signal <lineCounter$addsub0000> created at line 85.
+    Found 31-bit comparator greatequal for signal <VSync$cmp_ge0000> created at line 73.
+    Found 11-bit comparator less for signal <VSync$cmp_lt0000> created at line 73.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <ctrlVGA> synthesized.
+
+
+Synthesizing Unit <ClockDiv_1>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/ClockDiv.vhd".
+Unit <ClockDiv_1> synthesized.
+
+
+Synthesizing Unit <ClockDiv_2>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/ClockDiv.vhd".
+Unit <ClockDiv_2> synthesized.
+
+
+Synthesizing Unit <Pong>.
+    Related source file is "//pdc-srv/loyauf/SuperPONG/Pong.vhd".
+WARNING:Xst:647 - Input <DPadDown2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DPadUp2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <YPad2> is used but never assigned. This sourceless signal will be automatically connected to value 00001100100.
+WARNING:Xst:653 - Signal <XPad2> is used but never assigned. This sourceless signal will be automatically connected to value 01011101110.
+WARNING:Xst:653 - Signal <XPad1> is used but never assigned. This sourceless signal will be automatically connected to value 00000011110.
+WARNING:Xst:646 - Signal <Blank> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 11-bit latch for signal <YPad1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 11-bit addsub for signal <YPad1$mux0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Pong> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 11-bit adder                                          : 3
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 2
+ 13-bit adder                                          : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 1
+ 11-bit up counter                                     : 1
+# Registers                                            : 3
+ 11-bit register                                       : 1
+ 13-bit register                                       : 1
+ 7-bit register                                        : 1
+# Latches                                              : 1
+ 11-bit latch                                          : 1
+# Comparators                                          : 14
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator less                                : 4
+ 11-bit comparator lessequal                           : 4
+ 31-bit comparator greatequal                          : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 11-bit adder                                          : 3
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 2
+ 13-bit adder                                          : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 1
+ 11-bit up counter                                     : 1
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+# Latches                                              : 1
+ 11-bit latch                                          : 1
+# Comparators                                          : 14
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator less                                : 4
+ 11-bit comparator lessequal                           : 4
+ 31-bit comparator greatequal                          : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Pong> ...
+
+Optimizing unit <VGA_Rectangle> ...
+
+Optimizing unit <Counter_1> ...
+
+Optimizing unit <Counter_3> ...
+
+Optimizing unit <Counter_4> ...
+
+Optimizing unit <ctrlVGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Pong, actual ratio is 14.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Pong.ngr
+Top Level Output File Name         : Pong
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 470
+#      GND                         : 1
+#      INV                         : 30
+#      LUT1                        : 38
+#      LUT2                        : 71
+#      LUT3                        : 33
+#      LUT3_L                      : 5
+#      LUT4                        : 77
+#      LUT4_D                      : 2
+#      MUXCY                       : 154
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 57
+# FlipFlops/Latches                : 53
+#      FDC                         : 20
+#      FDR                         : 11
+#      FDRE                        : 11
+#      LDCPE                       : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 3
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-4 
+
+ Number of Slices:                      140  out of    960    14%  
+ Number of Slice Flip Flops:             53  out of   1920     2%  
+ Number of 4 input LUTs:                256  out of   1920    13%  
+ Number of IOs:                          17
+ Number of bonded IOBs:                  14  out of     83    16%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------+------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)  | Load  |
+---------------------------------------+------------------------+-------+
+clk_10ms(divider100/clkdiv_and000020:O)| NONE(*)(YPad1_0)       | 11    |
+clk                                    | BUFGP                  | 42    |
+---------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------+----------------------------------------+-------+
+Control Signal                                                             | Buffer(FF name)                        | Load  |
+---------------------------------------------------------------------------+----------------------------------------+-------+
+divider100/clkcounter/resetn_inv(divider10K/clkcounter/resetn_inv1_INV_0:O)| NONE(divider100/clkcounter/value_int_0)| 20    |
+YPad1_0__and0000(YPad1_0__and00001:O)                                      | NONE(YPad1_0)                          | 1     |
+YPad1_0__and0001(YPad1_0__and00011:O)                                      | NONE(YPad1_0)                          | 1     |
+YPad1_10__and0000(YPad1_10__and00001:O)                                    | NONE(YPad1_10)                         | 1     |
+YPad1_10__and0001(YPad1_10__and00011:O)                                    | NONE(YPad1_10)                         | 1     |
+YPad1_1__and0000(YPad1_1__and00001:O)                                      | NONE(YPad1_1)                          | 1     |
+YPad1_1__and0001(YPad1_1__and00011:O)                                      | NONE(YPad1_1)                          | 1     |
+YPad1_2__and0000(YPad1_2__and00001:O)                                      | NONE(YPad1_2)                          | 1     |
+YPad1_2__and0001(YPad1_2__and00011:O)                                      | NONE(YPad1_2)                          | 1     |
+YPad1_3__and0000(YPad1_3__and00001:O)                                      | NONE(YPad1_3)                          | 1     |
+YPad1_3__and0001(YPad1_3__and00011:O)                                      | NONE(YPad1_3)                          | 1     |
+YPad1_4__and0000(YPad1_4__and00001:O)                                      | NONE(YPad1_4)                          | 1     |
+YPad1_4__and0001(YPad1_4__and00011:O)                                      | NONE(YPad1_4)                          | 1     |
+YPad1_5__and0000(YPad1_5__and00001:O)                                      | NONE(YPad1_5)                          | 1     |
+YPad1_5__and0001(YPad1_5__and00011:O)                                      | NONE(YPad1_5)                          | 1     |
+YPad1_6__and0000(YPad1_6__and00001:O)                                      | NONE(YPad1_6)                          | 1     |
+YPad1_6__and0001(YPad1_6__and00011:O)                                      | NONE(YPad1_6)                          | 1     |
+YPad1_7__and0000(YPad1_7__and00001:O)                                      | NONE(YPad1_7)                          | 1     |
+YPad1_7__and0001(YPad1_7__and00011:O)                                      | NONE(YPad1_7)                          | 1     |
+YPad1_8__and0000(YPad1_8__and00001:O)                                      | NONE(YPad1_8)                          | 1     |
+YPad1_8__and0001(YPad1_8__and00011:O)                                      | NONE(YPad1_8)                          | 1     |
+YPad1_9__and0000(YPad1_9__and00001:O)                                      | NONE(YPad1_9)                          | 1     |
+YPad1_9__and0001(YPad1_9__and00011:O)                                      | NONE(YPad1_9)                          | 1     |
+---------------------------------------------------------------------------+----------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.102ns (Maximum Frequency: 140.805MHz)
+   Minimum input arrival time before clock: 5.342ns
+   Maximum output required time after clock: 16.831ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_10ms'
+  Clock period: 4.193ns (frequency: 238.493MHz)
+  Total number of paths / destination ports: 121 / 11
+-------------------------------------------------------------------------
+Delay:               4.193ns (Levels of Logic = 12)
+  Source:            YPad1_0 (LATCH)
+  Destination:       YPad1_10 (LATCH)
+  Source Clock:      clk_10ms falling
+  Destination Clock: clk_10ms falling
+
+  Data Path: YPad1_0 to YPad1_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCPE:G->Q            3   0.676   0.706  YPad1_0 (YPad1_0)
+     LUT4:I0->O            1   0.704   0.000  Maddsub_YPad1_mux0000_lut<0> (Maddsub_YPad1_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_YPad1_mux0000_cy<0> (Maddsub_YPad1_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<1> (Maddsub_YPad1_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<2> (Maddsub_YPad1_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<3> (Maddsub_YPad1_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<4> (Maddsub_YPad1_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<5> (Maddsub_YPad1_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<6> (Maddsub_YPad1_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<7> (Maddsub_YPad1_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<8> (Maddsub_YPad1_mux0000_cy<8>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_YPad1_mux0000_cy<9> (Maddsub_YPad1_mux0000_cy<9>)
+     XORCY:CI->O           3   0.804   0.000  Maddsub_YPad1_mux0000_xor<10> (YPad1_mux0000<10>)
+     LDCPE:D                   0.308          YPad1_10
+    ----------------------------------------
+    Total                      4.193ns (3.487ns logic, 0.706ns route)
+                                       (83.2% logic, 16.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.102ns (frequency: 140.805MHz)
+  Total number of paths / destination ports: 1011 / 75
+-------------------------------------------------------------------------
+Delay:               7.102ns (Levels of Logic = 3)
+  Source:            VGA/cc/value_int_1 (FF)
+  Destination:       VGA/lc/value_int_10 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: VGA/cc/value_int_1 to VGA/lc/value_int_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.591   0.995  VGA/cc/value_int_1 (VGA/cc/value_int_1)
+     LUT4:I0->O            1   0.704   0.595  VGA/lineTrigger_cmp_eq00004 (VGA/lineTrigger_cmp_eq00004)
+     LUT3:I0->O           12   0.704   0.965  VGA/lineTrigger_cmp_eq000031 (VGA/lineTrigger)
+     LUT4:I3->O           11   0.704   0.933  VGA/lc/value_int_and000039 (VGA/lc/value_int_and0000)
+     FDRE:R                    0.911          VGA/lc/value_int_0
+    ----------------------------------------
+    Total                      7.102ns (3.614ns logic, 3.488ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_10ms'
+  Total number of paths / destination ports: 88 / 22
+-------------------------------------------------------------------------
+Offset:              5.342ns (Levels of Logic = 13)
+  Source:            DPadUp1 (PAD)
+  Destination:       YPad1_10 (LATCH)
+  Destination Clock: clk_10ms falling
+
+  Data Path: DPadUp1 to YPad1_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   1.218   1.298  DPadUp1_IBUF (DPadUp1_IBUF)
+     LUT3:I2->O            1   0.704   0.420  YPad1_mux00012 (YPad1_mux0001)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<0> (Maddsub_YPad1_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<1> (Maddsub_YPad1_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<2> (Maddsub_YPad1_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<3> (Maddsub_YPad1_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<4> (Maddsub_YPad1_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<5> (Maddsub_YPad1_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<6> (Maddsub_YPad1_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<7> (Maddsub_YPad1_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_YPad1_mux0000_cy<8> (Maddsub_YPad1_mux0000_cy<8>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_YPad1_mux0000_cy<9> (Maddsub_YPad1_mux0000_cy<9>)
+     XORCY:CI->O           3   0.804   0.000  Maddsub_YPad1_mux0000_xor<10> (YPad1_mux0000<10>)
+     LDCPE:D                   0.308          YPad1_10
+    ----------------------------------------
+    Total                      5.342ns (3.624ns logic, 1.718ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 5787 / 5
+-------------------------------------------------------------------------
+Offset:              16.831ns (Levels of Logic = 19)
+  Source:            VGA/cc/value_int_8 (FF)
+  Destination:       Bout<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: VGA/cc/value_int_8 to Bout<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             19   0.591   1.260  VGA/cc/value_int_8 (VGA/cc/value_int_8)
+     LUT3:I0->O            1   0.704   0.000  VGA/Mcompar_Blank_int_cmp_lt0000_lut<2> (VGA/Mcompar_Blank_int_cmp_lt0000_lut<2>)
+     MUXCY:S->O            1   0.864   0.424  VGA/Mcompar_Blank_int_cmp_lt0000_cy<2> (VGA/Mcompar_Blank_int_cmp_lt0000_cy<2>)
+     LUT4:I3->O           80   0.704   1.356  VGA/Blank_int_or0000 (VGA/Blank_int)
+     LUT2:I1->O            2   0.704   0.622  VGA/lineCounter<1>1 (lineCounter_int<1>)
+     LUT2:I0->O            1   0.704   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_lut<0> (Pad1/Mcompar_Displayed_int_cmp_ge0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<0> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<1> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<2> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<3> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<4> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<5> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<6> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<7> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<8> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<8>)
+     MUXCY:CI->O           1   0.459   0.595  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<9> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<9>)
+     LUT4:I0->O            1   0.704   0.455  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<10> (Pad1/Displayed_int_cmp_ge0001)
+     LUT4:I2->O            2   0.704   0.622  Pad1/Displayed_int_and00001 (DisplayedPad1)
+     LUT2:I0->O            2   0.704   0.447  VGA/Bout<2>1 (Bout_1_OBUF)
+     OBUF:I->O                 3.272          Bout_1_OBUF (Bout<1>)
+    ----------------------------------------
+    Total                     16.831ns (11.050ns logic, 5.781ns route)
+                                       (65.7% logic, 34.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_10ms'
+  Total number of paths / destination ports: 93 / 3
+-------------------------------------------------------------------------
+Offset:              10.925ns (Levels of Logic = 14)
+  Source:            YPad1_1 (LATCH)
+  Destination:       Bout<2> (PAD)
+  Source Clock:      clk_10ms falling
+
+  Data Path: YPad1_1 to Bout<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCPE:G->Q            3   0.676   0.706  YPad1_1 (YPad1_1)
+     LUT3:I0->O            1   0.704   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_lut<1> (Pad1/Mcompar_Displayed_int_cmp_ge0001_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<1> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<2> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<3> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<4> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<5> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<6> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<7> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<8> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<8>)
+     MUXCY:CI->O           1   0.459   0.595  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<9> (Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<9>)
+     LUT4:I0->O            1   0.704   0.455  Pad1/Mcompar_Displayed_int_cmp_ge0001_cy<10> (Pad1/Displayed_int_cmp_ge0001)
+     LUT4:I2->O            2   0.704   0.622  Pad1/Displayed_int_and00001 (DisplayedPad1)
+     LUT2:I0->O            2   0.704   0.447  VGA/Bout<2>1 (Bout_1_OBUF)
+     OBUF:I->O                 3.272          Bout_1_OBUF (Bout<1>)
+    ----------------------------------------
+    Total                     10.925ns (8.100ns logic, 2.825ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.20 secs
+ 
+--> 
+
+Total memory usage is 249956 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

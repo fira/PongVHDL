@@ -1,0 +1,3 @@
+vhdl isim_temp "Counter.vhd"
+vhdl isim_temp "ctrlVGA.vhd"
+vhdl isim_temp "ctrlVGA_testbench.vhd"

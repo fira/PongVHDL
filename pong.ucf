@@ -1,0 +1,22 @@
+# Control Signals
+NET "clk" LOC = M6;
+NET "enable" LOC = E2;
+NET "resetn" LOC = N3;
+
+# User input
+NET "DPadUp1" LOC = A7;
+NET "DPadDown1" LOC = M4;
+NET "DPadUp2" LOC = C11;
+NET "DPadDown2" LOC = G12;
+
+# VGA signals
+NET "Rout[0]" LOC = C14;
+NET "Rout[1]" LOC = D13;
+NET "Rout[2]" LOC = F13;
+NET "Gout[0]" LOC = F14;
+NET "Gout[1]" LOC = G13;
+NET "Gout[2]" LOC = G14;
+NET "Bout[1]" LOC = H13;
+NET "Bout[2]" LOC = J13;
+NET "HSync" LOC = J14;
+NET "VSync" LOC = K13;

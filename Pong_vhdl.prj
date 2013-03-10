@@ -1,0 +1,5 @@
+vhdl work "\\pdc-srv\loyauf\SuperPONG\Counter.vhd"
+vhdl work "\\pdc-srv\loyauf\SuperPONG\VGA_Rectangle.vhd"
+vhdl work "\\pdc-srv\loyauf\SuperPONG\ctrlVGA.vhd"
+vhdl work "\\pdc-srv\loyauf\SuperPONG\ClockDiv.vhd"
+vhdl work "\\pdc-srv\loyauf\SuperPONG\Pong.vhd"

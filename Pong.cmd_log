@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong.ucf -p xc3s100e-cp132-4 Pong.ngc Pong.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -t 1 Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf pong.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong.ucf -p xc3s100e-cp132-4 Pong.ngc Pong.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -t 1 Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf pong.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/Pong.xst" -ofn "U:/SuperPONG/Pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pong.ucf -p xc3s100e-cp132-4 Pong.ngc Pong.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Pong_map.ncd Pong.ngd Pong.pcf 
+par -w -intstyle ise -ol high -t 1 Pong_map.ncd Pong.ncd Pong.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Pong.twx Pong.ncd -o Pong.twr Pong.pcf -ucf pong.ucf 
+bitgen -intstyle ise -f Pong.ut Pong.ncd 

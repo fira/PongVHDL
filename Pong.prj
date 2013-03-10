@@ -1,0 +1,5 @@
+vhdl work "Counter.vhd"
+vhdl work "VGA_Rectangle.vhd"
+vhdl work "ctrlVGA.vhd"
+vhdl work "ClockDiv.vhd"
+vhdl work "Pong.vhd"

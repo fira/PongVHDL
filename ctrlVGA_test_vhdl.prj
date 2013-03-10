@@ -1,0 +1,3 @@
+vhdl work "\\pdc-srv\loyauf\SuperPONG\Counter.vhd"
+vhdl work "\\pdc-srv\loyauf\SuperPONG\ctrlVGA.vhd"
+vhdl work "\\pdc-srv\loyauf\SuperPONG\ctrlVGA_test.vhd"

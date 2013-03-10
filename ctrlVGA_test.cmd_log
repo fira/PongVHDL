@@ -1,0 +1,145 @@
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.xst" -ofn "E:/Theo/Documents/PR202/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 
+xst -intstyle ise -ifn "U:/SuperPONG/ctrlVGA_test.xst" -ofn "U:/SuperPONG/ctrlVGA_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ctrlVGA_test.ucf -p xc3s100e-cp132-4 ctrlVGA_test.ngc ctrlVGA_test.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o ctrlVGA_test_map.ncd ctrlVGA_test.ngd ctrlVGA_test.pcf 
+par -w -intstyle ise -ol high -t 1 ctrlVGA_test_map.ncd ctrlVGA_test.ncd ctrlVGA_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ctrlVGA_test.twx ctrlVGA_test.ncd -o ctrlVGA_test.twr ctrlVGA_test.pcf -ucf ctrlVGA_test.ucf 
+bitgen -intstyle ise -f ctrlVGA_test.ut ctrlVGA_test.ncd 

@@ -1,0 +1,16 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "Bout[1]" LOC = H13;
+NET "Bout[2]" LOC = J13;
+NET "Gout[0]" LOC = F14;
+NET "Gout[1]" LOC = G13;
+NET "Gout[2]" LOC = G14;
+NET "HSync" LOC = J14;
+NET "Rout[0]" LOC = C14;
+NET "Rout[1]" LOC = D13;
+NET "Rout[2]" LOC = F13;
+NET "VSync" LOC = K13;
+NET "clk" LOC = M6;
+NET "enable" LOC = E2;
+NET "resetn" LOC = N3;

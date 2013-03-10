@@ -1,0 +1,3 @@
+vhdl work "Counter.vhd"
+vhdl work "ctrlVGA.vhd"
+vhdl work "ctrlVGA_test.vhd"
